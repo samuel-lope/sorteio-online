@@ -1,8 +1,20 @@
 {
-  "name": "sorteio-roleta-mágica",
+  "name": "sorteio-online",
+  "version": "0.0.1",
   "private": true,
-  "version": "0.0.0",
+  "description": "Ferramenta online para sorteios",
+  "homepage": "https://github.com/samuel-lope/sorteio-online#readme",
+  "bugs": {
+    "url": "https://github.com/samuel-lope/sorteio-online/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuel-lope/sorteio-online.git"
+  },
+  "license": "ISC",
+  "author": "Samuel Lopes",
   "type": "module",
+  "main": "index.tsx",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
