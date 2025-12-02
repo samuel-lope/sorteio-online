@@ -67,6 +67,8 @@ export const RaffleArea: React.FC<RaffleAreaProps> = ({ config, drawnNumbers, on
     }
   }, [showResultModal, lastDrawnBatch, config.min, config.max]);
 
+  
+
   const isFinished = drawnNumbers.length >= config.quantity;
 
   return (
