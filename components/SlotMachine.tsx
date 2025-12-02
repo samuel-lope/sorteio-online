@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { WheelItem, VisualTheme } from '../types';
+import { playWinSound } from '../services/soundService';
 
 interface SlotMachineProps {
   items: WheelItem[];
@@ -80,7 +81,8 @@ export const SlotMachine: React.FC<SlotMachineProps> = ({
           setReelOffsets([...newOffsets]);
           animationFrameRef.current = requestAnimationFrame(animate);
         } else {
-          // Finished
+          // Finished - play win sound
+          playWinSound();
           onSpinComplete();
         }
       };

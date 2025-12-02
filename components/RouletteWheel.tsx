@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { WheelItem, VisualTheme } from '../types';
+import { playWinSound } from '../services/soundService';
 
 interface RouletteWheelProps {
   items: WheelItem[];
@@ -85,6 +86,7 @@ export const RouletteWheel: React.FC<RouletteWheelProps> = ({
       setRotation(finalRotation);
 
       const timeout = setTimeout(() => {
+        playWinSound();
         onSpinComplete();
       }, duration * 1000); 
 
